@@ -6,7 +6,7 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.0.0/dist/aframe-physics-system.min.js"></script>
-      <script>
+     <script>
   AFRAME.registerComponent('alpha-test', {
     dependencies: ['material'],
     init: function () {
@@ -22,6 +22,8 @@
 
 sound.play();
       </script>
+      
+      
       
   </head>
   <body>
@@ -77,8 +79,11 @@ sound.play();
     <a-entity obj-model="obj: #plastic-obj;" material="src: #stoneTexture" scale="0.03 0.03 0.03" position="1 0 -12"></a-entity> !-->
 
   
-  <!--  <a-light type="point" color="white" position="0 5 0"></a-light>
-    <a-light color="red" position="1 0 -10"></a-light> !-->
+    <a-light type="point" color="white" position="0 5 0"></a-light>
+    <a-light color="red" position="1 0 -10"></a-light>
+        
+    <a-sound src="audio/hrust.ogg" volume=1 autoplay="true" loop="true" position="16 2 -10"></a-sound>
+    <a-sound src="audio/grand_stairs.ogg" volume=3 autoplay="true" loop="true" position="0 2 10"></a-sound>
 
     
     </a-scene>
