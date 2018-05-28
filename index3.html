@@ -14,25 +14,7 @@
     }
   });
 </script>
-            <script src="dist/howler.js"></script>
-      <script>
-          var sound = new Howl({
-  src: ['permanent_sounds/imba3.mp3'],
-              sprite: {
-      lightning: [0, 4147],
-      rain: [10, 9962, true],
-      thunder: [19000, 13858],
-      music: [34000, 31994, true]
-    },
-});
-
-          
-/* sound.play('rain'); */
-          
-        sound.pos(x + 0.5, y + 1225, -0.5);
-          
-          
-      </script>
+   
       
       
       
@@ -42,15 +24,15 @@
     <a-scene>
         
         <a-sound src="audio/grand_stairs.ogg" volume=5 autoplay="true" loop="true" position="0 2 10"></a-sound>
-        <a-sound src="permanent_sounds/imba1.mp3" volume=5 autoplay="true" loop="true" position="0 5 10"></a-sound>
-        <a-sound src="permanent_sounds/imba2.mp3" volume=3 autoplay="true" loop="true" position="10 0 -7"></a-sound>
-        <a-sound src="permanent_sounds/imba3.mp3" volume=5 autoplay="true" loop="true" position="6 0.1 -20"></a-sound>
-        <a-sound src="permanent_sounds/imba4.mp3" volume=5 autoplay="true" loop="true" position="6 0.1 -20"></a-sound>
-        <a-sound src="permanent_sounds/imba5.mp3" volume=6 autoplay="true" loop="true" position="-3 10 11"></a-sound>
+        <a-sound src="permanent_sounds/imba1-1.mp3" volume=5 autoplay="true" loop="true" position="0 5 10"></a-sound>
+        <a-sound src="permanent_sounds/imba2-1.mp3" volume=3 autoplay="true" loop="true" position="10 0 -7"></a-sound>
+        <a-sound src="permanent_sounds/imba3-1.mp3" volume=5 autoplay="true" loop="true" position="6 0.1 -20"></a-sound>
+        <a-sound src="permanent_sounds/imba4-1.mp3" volume=5 autoplay="true" loop="true" position="6 0.1 -20"></a-sound>
+        <a-sound src="permanent_sounds/imba5-1.mp3" volume=6 autoplay="true" loop="true" position="-3 10 11"></a-sound>
         
         
       <a-assets>
-          <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+          <!--<img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"> !-->
           <img id="skyTexture" src="textures/sky1.jpg">
       </a-assets>
         
@@ -60,19 +42,19 @@
         <a-animation attribute="rotation" begin="0" dur="30000" to="0 360 0" easing="ease-in-out-cubic" repeat="indefinite"></a-animation>
     </a-sky>
         
-    <a-asset-item id="man2-obj" src="models/man2.obj"></a-asset-item>
+    <a-asset-item id="man2-obj" src="models/man2-o2.obj"></a-asset-item>
     <img id="stoneTexture" src="textures/stone.jpg">
     <a-entity obj-model="obj: #man2-obj;" material="src: #stoneTexture" scale="0.2 0.2 0.2" position="1 0 -10"></a-entity>
         
-    <a-asset-item id="twist-obj" src="models/twist.obj"></a-asset-item>
-    <img id="twistTexture" src="textures/noirrouge.jpg">
-    <a-entity obj-model="obj: #twist-obj;" material="src: #twistTexture" scale="0.05 0.03 0.05" position="1 -0.5 -10">
+    <a-asset-item id="twist-obj" src="models/twist-o.obj"></a-asset-item>
+    <!-- <img id="twistTexture" src="textures/noirrouge.jpg"> !-->
+    <a-entity obj-model="obj: #twist-obj;" scale="0.05 0.03 0.05" position="1 -0.5 -10">
         <!-- <a-animation attribute="rotation" begin="0" dur="30000" to="0 360 0"  repeat="indefinite"></a-animation> !-->
     </a-entity>
 
-    <a-asset-item id="manlegt-obj" src="models/man_legt.obj"></a-asset-item>
+    <a-asset-item id="manlegt-obj" src="models/man_legt-o.obj"></a-asset-item>
     <img id="stoneTexture" src="textures/stone.jpg">
-    <a-entity obj-model="obj: #manlegt-obj;" material="src: #stoneTexture" scale="0.025 0.025 0.025" position="7 0.1 -20"></a-entity>
+    <a-entity obj-model="obj: #manlegt-obj;" material="src: #stoneTexture"  metalness="1" scale="0.025 0.025 0.025" position="7 0.1 -20"></a-entity>
 
         
     
@@ -96,10 +78,10 @@
         <a-image src="textures/p6.jpg" scale="3 5 5" rotation="0 0 0" position="20 2 13"></a-image>
         <a-image src="textures/p7.jpg" scale="5 5 5" rotation="0 40 0" position="3 4 -20"></a-image>
         
-    <a-asset-item id="plastic-obj" src="models/plastic.obj"></a-asset-item>
+    <a-asset-item id="plastic-obj" src="models/plastic-o.obj"></a-asset-item>
     <a-asset-item id="plastic-mtl" src="models/plastic.mtl"></a-asset-item> 
 
-    <a-entity obj-model="obj: #plastic-obj;" material="src: #stoneTexture" scale="0.03 0.03 0.03" position="1 0 -12"></a-entity>
+    <a-entity obj-model="obj: #plastic-obj;" material="color: red" metalness="1" scale="0.03 0.03 0.03" position="1 0 -12"></a-entity>
 
   
     <a-light type="point" color="white" position="0 5 0"></a-light>
