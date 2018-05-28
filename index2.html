@@ -17,10 +17,21 @@
             <script src="dist/howler.js"></script>
       <script>
           var sound = new Howl({
-  src: ['sprite.mp3']
+  src: ['audio/a.mp3'],
+              sprite: {
+      lightning: [0, 4147],
+      rain: [10, 9962, true],
+      thunder: [19000, 13858],
+      music: [34000, 31994, true]
+    },
 });
 
-sound.play();
+          
+sound.play('rain');
+          
+        sound.pos(x + 0.5, y + 1225, -0.5);
+          
+          
       </script>
       
       
@@ -76,14 +87,14 @@ sound.play();
     <a-asset-item id="plastic-obj" src="models/plastic.obj"></a-asset-item>
     <a-asset-item id="plastic-mtl" src="models/plastic.mtl"></a-asset-item> 
 
-    <a-entity obj-model="obj: #plastic-obj;" material="src: #stoneTexture" scale="0.03 0.03 0.03" position="1 0 -12"></a-entity> !-->
+    <a-entity obj-model="obj: #plastic-obj;" material="src: #stoneTexture" scale="0.03 0.03 0.03" position="1 0 -12"></a-entity>
 
   
     <a-light type="point" color="white" position="0 5 0"></a-light>
     <a-light color="red" position="1 0 -10"></a-light>
         
-    <a-sound src="audio/hrust.ogg" volume=1 autoplay="true" loop="true" position="16 2 -10"></a-sound>
-    <a-sound src="audio/grand_stairs.ogg" volume=3 autoplay="true" loop="true" position="0 2 10"></a-sound>
+    <!-- <a-sound src="audio/hrust.ogg" volume=1 autoplay="true" loop="true" position="16 2 -10"></a-sound>
+    <a-sound src="audio/grand_stairs.ogg" volume=3 autoplay="true" loop="true" position="0 2 10"></a-sound> !-->
 
     
     </a-scene>
