@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello, WebVR! - A-Frame</title>
+    <title>PERMANENT IMBALANCE   HMOT</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="js/aframe-extras.min.js"></script>
@@ -41,6 +41,11 @@
     <a-sky id="background" src="#skyTexture" theta-length="190" radius="30">
         <a-animation attribute="rotation" begin="0" dur="30000" to="0 360 0" easing="ease-in-out-cubic" repeat="indefinite"></a-animation>
     </a-sky>
+        
+        
+        <a-asset-item id="horse-obj" src="models/horse.obj"></a-asset-item>
+        <a-entity obj-model="obj: #horse-obj;" scale="0.1 0.1 0.1" position="16 2 -10"></a-entity>
+
         
     <a-asset-item id="man2-obj" src="models/man2-o2.obj"></a-asset-item>
     <img id="stoneTexture" src="textures/stone.jpg">
